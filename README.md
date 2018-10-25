@@ -1,5 +1,5 @@
 # Chest
-Portal for Minecraft-Servers with Database Lookup and modern Design
+Portal for Minecraft-Servers with Database Lookup and modern Design (even mobile!)
 
 
 ## Screenshots
