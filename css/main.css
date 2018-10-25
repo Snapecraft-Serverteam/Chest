@@ -143,9 +143,18 @@ p {
 
     figcaption {
         text-align: center;
-        color: #000000;
-        margin-top: 2em;
-        display: none;
+        color: #ffffff;
+        margin-top: 1em;
+        margin-bottom: 1em !important;
+        font-weight: 600;
+        font-size: 3em;
+        padding: 0;
+    }
+
+    figure {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 1em !important;
     }
 
     ul li a{
