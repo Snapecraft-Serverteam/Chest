@@ -1,6 +1,6 @@
 <?php
 
-$pdo = new PDO('mysql:host=localhost;dbname=bw', 'bw', 'pw');
+$pdo = new PDO('mysql:host=localhost;dbname=bw', 'bw', 'bwdb38ymlqs');
 
 $sql = "SELECT * FROM stats_players WHERE name=".$_GET['p'];
 $stats = array();
