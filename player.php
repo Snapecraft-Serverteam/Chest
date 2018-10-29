@@ -1,11 +1,11 @@
 <?php
-include PlayerCorrect.php;
+//include PlayerCorrect.php;
 $found = false;
 if(isset($_GET['p'])) {
-    if(isAv($_GET['p'])) {
+    //if(isAv($_GET['p'])) {
         $found = true;
         $name = $_GET['p'];
-    }
+    //}
 }
 
 
