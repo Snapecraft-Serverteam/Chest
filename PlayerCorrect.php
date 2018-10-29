@@ -10,4 +10,12 @@ if(MojangAPI::getUuid($user) == false) {
     return true;
 }
 }
-$user
+
+if(isset($_GET['p'])) {
+    if isAv($_GET['p']) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
