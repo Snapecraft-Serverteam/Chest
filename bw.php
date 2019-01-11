@@ -1,13 +1,30 @@
 <?php
+error_reporting(E_PARSE);
+//$pdo = new PDO('mysql:host=localhost;dbname=bw', 'root', '');
 
-$pdo = new PDO('mysql:host=localhost;dbname=bw', 'bw', '');
 
-$sql = "SELECT * FROM stats_players WHERE name=".$_GET['p'];
-$stats = array();
+$s = "'";
 
-echo '<table><tr><th>Name</th><th>Kills</th><th>Tode</th><th>Siege</th><th>Niederlagen</th><th>Betten abgebaut</th><th>Score</th></tr>';
+$sql = "SELECT * FROM stats_players WHERE name=".$s.$_GET['p'].$s."";
+//echo $sql;
 
-foreach ($pdo->query($sql) as $row) {
+
+$mysqli = new mysqli("localhost", "root", "", "bw");
+if ($mysqli->connect_errno) {
+    die("Verbindung fehlgeschlagen: " . $mysqli->connect_error);
+}
+$id = 100;
+$statement = $mysqli->prepare($sql);
+$statement->bind_param('i', $id);
+$statement->execute();
+ 
+$result = $statement->get_result();
+ 
+echo '<link rel="stylesheet" type="text/css" href="css/table.css">';
+echo '<table class="container"><thead></d><tr><th>Name</th><th>Kills</th><th>Tode</th><th>Siege</th><th>Niederlagen</th><th>Betten abgebaut</th><th>Score</th></thead></tr>';
+
+echo '<tbody>';
+while($row = $result->fetch_assoc()) {
    echo '<tr>';
    echo '<th>'.$row['name'].'</th>';
    echo '<th>'.$row['kills'].'</th>';
@@ -18,6 +35,25 @@ foreach ($pdo->query($sql) as $row) {
    echo '<th>'.$row['score'].'</th>';
    echo '</tr>';
 }
-echo '</table>';
+
+echo '</tbody></table>';
+
+
+
+//echo '<table><tr><th>Name</th><th>Kills</th><th>Tode</th><th>Siege</th><th>Niederlagen</th><th>Betten abgebaut</th><th>Score</th></tr>';
+//print_r($pdo->query($sql));
+/*
+foreach ($pdo->query($sql) as $row) {
+   echo '<tr>';
+   echo '<th>'.$row['name'].'</th>';
+   echo '<th>'.$row['kills'].'</th>';
+   echo '<th>'.$row['deaths'].'</th>';
+   echo '<th>'.$row['wins'].'</th>';
+   echo '<th>'.$row['loses'].'</th>';
+   echo '<th>'.$row['destroyedBeds'].'</th>';
+   echo '<th>'.$row['score'].'</th>';
+   echo '</tr>';
+}*/
+//echo '</table>';
 
 ?>
