@@ -1,13 +1,12 @@
 <?php
 include 'uuid.php';
-//include PlayerCorrect.php;
+include 'bw.php';
 $found = false;
 if(isset($_GET['p'])) {
-    //if(isAv($_GET['p'])) {
         $found = true;
         $name = $_GET['p'];
         $uuid = username_to_uuid($name);
-    //}
+        $bwstats = getBWStats($name);
 }
 
 
@@ -47,7 +46,7 @@ if(isset($_GET['p'])) {
             <nav>
                 <ul>
                     <li><a href="index.html" class="current-link">Profil</a></li>
-                    <li><a href="client.html">Minigames</a></li>
+                    <li><a href="#">Minigames</a></li>
                     <li><a href="#">Modpacks</a></li>
                     <li><a href="#">Achievements</a></li>
                 </ul>
@@ -67,6 +66,21 @@ if(isset($_GET['p'])) {
             <?php } ?>
             <!-- Error ENDE -->
             
+
+            <div class="world-box" style="-webkit-font-smoothing: subpixel-antialiased">
+                <div class="world-box-titlebar">
+                    <p class="world-box-titlebar-text">Bedwars</p>
+                </div>
+                <div class="world-box-body">
+                    <p><b>Kills:</b> <?php echo $row[''] ?></p>
+                    <p>Mitspieler: LordBuschos, Tallerik</p><br>
+                    <p>Spielstunden: 71</p>
+                </div>
+            </div>
+
+
+
+
 
 
             <p class="bottom">Dieses Tool wurde von Snapecraft entwickelt und kann auf <a href="https://github.com/MayusYT/Chest">GitHub</a> heruntergeladen werden</p>
