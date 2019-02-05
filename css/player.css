@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 body, html {
     height: calc(100% - 2em);
@@ -75,7 +76,7 @@ ul li a {
 
 main{
     background: white;
-    padding: 1em 1.4em;
+    /*padding: 1em 1.4em;*/
     
 }
 
@@ -117,7 +118,7 @@ p {
 
 
     main {
-        padding: 4em;
+        /*padding: 4em;*/
         background: #ffffff;
         position: relative;
         box-shadow: -8px 0px 10px rgba(0, 0, 0, .20);
@@ -273,4 +274,132 @@ p {
     p {
     margin: 0;
     }
+}
+
+@media all {
+    .world-box {
+        display: block;
+        -webkit-box-shadow: 0px 3px 14px -3px rgba(0, 0, 0, 0.62);
+        box-shadow: 0px 3px 14px -3px rgba(0, 0, 0, 0.62);
+        margin: 4em;
+        height: auto;
+        max-width: 25em;
+        width: auto;
+        z-index: 1;
+        border-radius: .5em;
+        border-left: 1px solid rgb(223, 223, 223);
+        border-right: 1px solid rgb(223, 223, 223);
+        border-bottom: 1px solid rgb(223, 223, 223);
+    }
+
+    .world-box-titlebar {
+        height: 3.2em;
+        width: auto;
+        background: -moz-linear-gradient(45deg, #12eaf6 0%, #005dff 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #12eaf6 0%, #005dff 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #12eaf6 0%, #005dff 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        z-index: 0;
+        border-top-left-radius: .5em;
+        border-top-right-radius: .5em;
+        border-top: 1px solid rgb(223, 223, 223);
+        border-bottom: 1px solid rgb(223, 223, 223);
+        vertical-align: middle;
+        line-height: 3.5em;
+
+    }
+
+    .world-box-titlebar-text {
+        margin-left: .8em;
+        font-family: 'Gothic A1', sans-serif;
+        font-weight: 600;
+        font-size: 1.5em;
+        color: rgba(0, 0, 0, .5);
+        user-select: none;
+    }
+
+    .world-box-body {
+        margin-top: .5em;
+        margin-left: 5px;
+        margin-bottom: .5em;
+        font-family: 'Gothic A1', sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+        color: rgba(0, 0, 0, .7);
+    }
+
+    .world-box-body-button {
+        margin-top: -1.5em;
+        margin-right: 1em;
+        float: right;
+        width: 1.2em;
+        opacity: .2;
+        user-select: none;
+    }
+
+    .world-box-body, .world-box-titlebar-text p {
+        /*margin: 0 !important;
+*/
+    }
+    .world-box-body, .world-box-body p {
+        font-size: 1.1em!important;
+        text-align: left!important;
+        /*margin: 0!important;*/
+
+    }
+    .world-box-titlebar {
+        text-align: center!important;
+
+    }
+    .world-box-titlebar {
+        font-weight: bolder!important;
+    }
+
+    header {
+        width: auto;
+        max-height: 20em;
+        height: auto;
+        margin:0 0 10px 0!important;
+        text-align: left;
+        color: white;
+
+        background: rgb(122,233,255);
+        background: -moz-linear-gradient(90deg, rgba(122,233,255,1) 0%, rgba(44,44,228,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(122,233,255,1) 0%, rgba(44,44,228,1) 100%);
+        background: linear-gradient(90deg, rgba(122,233,255,1) 0%, rgba(44,44,228,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7ae9ff",endColorstr="#2c2ce4",GradientType=1);
+        padding-bottom: 20px;
+    }
+
+    .titleName {
+        padding-top: 20px;
+        margin-left: 20px;
+        font-size: 100px;
+    }
+
+    .titleTag {
+        margin: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 20px!important;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        background-color: #D4913A;
+        border-radius: .2em;
+        font-size: .35em;
+        color: white;
+        /*padding: 0;*/
+        float: right;
+    }
+    .status {
+        margin-left: 15px;
+
+    }
+    .onlinedot {
+        display: inline;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+
 }

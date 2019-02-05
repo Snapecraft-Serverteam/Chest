@@ -1,12 +1,13 @@
 <?php
 include 'uuid.php';
-include 'bw.php';
+include 'data.php';
+
 $found = false;
 if(isset($_GET['p'])) {
         $found = true;
         $name = $_GET['p'];
         $uuid = username_to_uuid($name);
-        $bwstats = getBWStats($name);
+        $data = getData($uuid);
 }
 
 
@@ -65,11 +66,33 @@ if(isset($_GET['p'])) {
             </div>
             <?php } ?>
             <!-- Error ENDE -->
-            
+
+
+            <header>
+
+                <div class="titleName">
+                    <?php echo $name;?>
+                    <div class="titleTag">
+                        <p>Premium</p>
+                    </div>
+                </div>
+                <div class="status">
+                    <div>Spieler ist Offline</div>
+                </div>
+
+
+            </header>
+
+
+
+
+
+
+
 
             <div class="world-box" style="-webkit-font-smoothing: subpixel-antialiased">
                 <div class="world-box-titlebar">
-                    <p class="world-box-titlebar-text">Bedwars</p>
+                    <p class="world-box-titlebar-text"><b>Bedwars</b></p>
                 </div>
                 <div class="world-box-body">
                     <p><b>Kills:</b> <?php echo $row[''] ?></p>
@@ -77,27 +100,17 @@ if(isset($_GET['p'])) {
                     <p>Spielstunden: 71</p>
                 </div>
             </div>
-
-
-
-
-
-
             <p class="bottom">Dieses Tool wurde von Snapecraft entwickelt und kann auf <a href="https://github.com/MayusYT/Chest">GitHub</a> heruntergeladen werden</p>
-        
-        <script>
-        
-            
+        </main>
 
-            (function() {
-                var menu = document.querySelector('ul'),
-                    menulink = document.querySelector('img');
-                
-                menulink.addEventListener('click', function(e) {
-                    menu.classList.toggle('active');
-                    e.preventDefault();
-                })
-            })();
+
+
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelector(".world-box"), {
+                max: 8,
+                speed: 50
+            });
             
         </script>
         
