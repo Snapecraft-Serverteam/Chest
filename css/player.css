@@ -278,18 +278,20 @@ p {
 
 @media all {
     .world-box {
-        display: block;
+        display: inline-table;
         -webkit-box-shadow: 0px 3px 14px -3px rgba(0, 0, 0, 0.62);
         box-shadow: 0px 3px 14px -3px rgba(0, 0, 0, 0.62);
         margin: 4em;
         height: auto;
         max-width: 25em;
+        min-width: 20em;
         width: auto;
         z-index: 1;
         border-radius: .5em;
         border-left: 1px solid rgb(223, 223, 223);
         border-right: 1px solid rgb(223, 223, 223);
         border-bottom: 1px solid rgb(223, 223, 223);
+        overflow: hidden;
     }
 
     .world-box-titlebar {
@@ -325,6 +327,7 @@ p {
         font-weight: 500;
         font-size: 1em;
         color: rgba(0, 0, 0, .7);
+        padding-right: 5px;
     }
 
     .world-box-body-button {
@@ -384,7 +387,6 @@ p {
         display: inline-block;
         width: auto;
         text-align: center;
-        background-color: #D4913A;
         border-radius: .2em;
         font-size: .35em;
         color: white;
