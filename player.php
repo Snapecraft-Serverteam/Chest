@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_COMPILE_ERROR);
 include 'uuid.php';
 include 'data.php';
 
@@ -59,9 +60,9 @@ if(isset($_GET['p'])) {
             <nav>
                 <ul>
                     <li><a href="index.html" class="current-link">Profil</a></li>
-                    <li><a href="#">Minigames</a></li>
-                    <li><a href="#">Modpacks</a></li>
-                    <li><a href="#">Achievements</a></li>
+<!--                    <li><a href="#">Minigames</a></li>-->
+<!--                    <li><a href="#">Modpacks</a></li>-->
+<!--                    <li><a href="#">Achievements</a></li>-->
                 </ul>
             </nav>
                

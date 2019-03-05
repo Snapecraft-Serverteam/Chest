@@ -1,4 +1,4 @@
-button {
+button:not(.lock) {
     border: 0;
     background: #0087cc;
     border-radius: 4px;
@@ -15,7 +15,18 @@ button {
     -ms-user-select: none; /* IE10+ */
     
   }
-  button:active {
+.lock {
+    border: 0;
+    background: #323C50;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #323C50;
+    color: #fff;
+    font: inherit;
+    margin: 0.2em;
+    outline: 0;
+    padding: 12px 20px;
+}
+  button:not(.lock):active {
     box-shadow: 0 2px 0 #006599;
     transform: translateY(3px);
   }
@@ -23,3 +34,4 @@ button {
     display: flex;
     justify-content: center;
   }
+

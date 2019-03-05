@@ -7,9 +7,15 @@
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/button.css">
         <title>Chest</title>
-        
+        <script>
+            function dlwin() {
+                document.getElementById("downloadwin").click();
+            }
+        </script>
     </head>
     <body>
+    <!-- Download Hidden link-->
+    <a href="winddownloadhere" download id="downloadwin" hidden></a>
         <aside>
             <figure>
                 <div id="avatar"></div>
@@ -20,8 +26,8 @@
                     <ul>
                         <li><a href="index.html">Database</a></li>
                         <li><a href="client.html" class="current-link">Client</a></li>
-                        <li><a href="#">Changelog</a></li>
-                        <li><a href="#">Bugs</a></li>
+                        <!--<li><a href="#">Changelog</a></li>-->
+                        <!--<li><a href="#">Bugs</a></li>-->
                     </ul>
                     
 
@@ -32,9 +38,9 @@
             <h1>Client</h1>
             <p>Lade unseren Minecraft Client herunter, um immer die neusten und stabilsten Modpacks zu erhalten.</p>
             <div class="container">
-                <button type="button">Mac</button>
-                <button type="button">Windows</button>
-                <button type="button">Java</button>
+                <button type="button" class="lock" disabled="true" title="Comming Soon">Mac</button>
+                <button type="button" class="lock" disabled="true" title="Comming Soon">Windows</button>
+                <button type="button" class="lock" disabled="true" title="Comming Soon">Java</button>
             </div>
             
         </main>
