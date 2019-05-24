@@ -8,14 +8,10 @@
         <meta name="description" content="Chest ist die offizielle Spielerseite des Snapecraft Servernetzwerkes">
         <meta name="keywords" content="Snapecraft,Minecraft,Spielerprofil,Server">
         <meta name="author" content="Tallerik, MayusYT">
-        <!--<meta class="local" content="linktokrassesimg" name="image"/>-->
-
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/searchbar.css">
         <link rel="stylesheet" href="css/alert.css">
         <title>Chest</title>
-        
-        
     </head>
     <body>
         <aside>
@@ -31,10 +27,7 @@
                         <!--<li><a href="#">Changelog</a></li>-->
                         <!--<li><a href="#">Bugs</a></li>-->
                     </ul>
-                    
-        
                 </nav>
-               
         </aside>
         <main>
             <div hidden id="alertbox" class="alert">
@@ -52,7 +45,7 @@
                     </symbol>
                   </svg>
                   
-                  <form novalidate="novalidate" onsubmit="check();" method="GET" action="player.php" class="searchbox sbx-custom">
+                  <form novalidate="novalidate" onsubmit="check();" method="GET" action="player.html" class="searchbox sbx-custom">
                     <div role="search" class="sbx-custom__wrapper">
                       <input id="search" type="search" name="p" placeholder="Bitte Spieler eingeben" autocomplete="off" required="required" class="sbx-custom__input">
                       <button type="submit" title="Query ausführen" class="sbx-custom__submit">
@@ -77,9 +70,6 @@
             <p class="bottom">Dieses Tool wurde von Snapecraft entwickelt und kann auf <a href="https://github.com/MayusYT/Chest">GitHub</a> heruntergeladen werden</p>
         </main>
         <script>
-        
-            
-
             (function() {
                 var menu = document.querySelector('ul'),
                     menulink = document.querySelector('img');
@@ -89,35 +79,6 @@
                     e.preventDefault();
                 })
             })();
-            
         </script>
-        <script>
-        
-        function check() {
-            var val = document.getElementsById('search').value;
-
-            if(val == "") {
-                document.getElementById('alertbox').style.display = "block";
-                return false;
-            } else {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        var res = this.responseText;
-                        if(res == "true") {
-                            return true;
-                        } else {
-                            document.getElementById('alertbox').style.display = "block";
-                            return false;
-                        }
-                    }
-                };
-                xmlhttp.open("GET", "PlayerCorrect.php?p=" + val, true);
-                xmlhttp.send();
-            }
-        }
-        
-        </script>
-        
     </body>
 </html>

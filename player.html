@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/player.css">
+        <link rel="stylesheet" href="css/searchbar.css">
+        <link rel="stylesheet" href="css/alert.css">
+        <title>Chest - Spieler</title>
+    </head>
+    <body>
+        <aside>
+            <figure>
+                <figcaption>
+                    <div class="uname">
+                        Name
+                    </div>
+                     <div class="tag" style="background-color: red;">
+                         <p>Krasser Rang</p>
+                     </div>
+                 </figcaption>
+                 <div class="avatar">
+                   <img src="https://crafatar.com/renders/body/uuid?scale=6&overlay">
+                 </div>
+            </figure>
+            <img id="menuburger" src="images/menu.svg">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="current-link">Zurück</a></li>
+                    <li><a href="#" class="current-link">Profil</a></li>
+<!--                    <li><a href="#">Minigames</a></li>-->
+<!--                    <li><a href="#">Modpacks</a></li>-->
+<!--                    <li><a href="#">Achievements</a></li>-->
+                </ul>
+            </nav>
+               
+        </aside>
+        <main>
+            <header>
+<!--                background-color: #D4913A;-->
+                <div class="titleName">
+                    Name
+                    <div class="titleTag" style="background-color: red;">
+                        <p>Krasser Rang</p>
+                    </div>
+                </div>
+                <div class="status">
+                    <div>Spieler ist Offline</div>
+                </div>
+
+
+            </header>
+
+
+
+            <!--Bedwars-->
+            <div class="world-box" id="bw" style="-webkit-font-smoothing: subpixel-antialiased">
+                <div class="world-box-titlebar">
+                    <p class="world-box-titlebar-text"><b>Bedwars</b></p>
+                </div>
+                <div class="world-box-body">
+                    <p><b>Wins:</b> 2></p>
+                    <p><b>Betten zerstört:</b> 2</p>
+                    <p><b>Loses:</b> 2</p>
+                    <p><b>Kills:</b> 2</p>
+                    <p><b>Deaths:</b> 2</p>
+                    <p><b>Score:</b> 2</p>
+                </div>
+            </div>
+
+            <!--Playtime-->
+                <div class="world-box" id="playtime" style="-webkit-font-smoothing: subpixel-antialiased">
+                    <div class="world-box-titlebar">
+                        <p class="world-box-titlebar-text"><b>Spielzeit</b></p>
+                    </div>
+                    <div class="world-box-body">
+
+                    </div>
+                </div>
+            <?php } ?>
+
+
+            <p class="bottom">Dieses Tool wurde von Snapecraft entwickelt und kann auf <a href="https://github.com/Snapecraft-Serverteam/Chest">GitHub</a> heruntergeladen werden</p>
+        </main>
+
+
+
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelector("#bw"), {
+                max: 8,
+                speed: 50
+            });
+            VanillaTilt.init(document.querySelector("#playtime"), {
+                max: 8,
+                speed: 50
+            });
+        </script>
+        
+    </body>
+</html>
