@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese');
 
 body, html {
     height: calc(100% - 2em);
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
 }
 
 body {
@@ -312,8 +311,8 @@ p {
 
     .world-box-titlebar-text {
         margin-left: .8em;
-        font-family: 'Gothic A1', sans-serif;
-        font-weight: 600;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 700;
         font-size: 1.5em;
         color: rgba(0, 0, 0, .5);
         user-select: none;
@@ -323,7 +322,7 @@ p {
         margin-top: .5em;
         margin-left: 5px;
         margin-bottom: .5em;
-        font-family: 'Gothic A1', sans-serif;
+        font-family: 'IBM Plex Sans', sans-serif;
         font-weight: 500;
         font-size: 1em;
         color: rgba(0, 0, 0, .7);

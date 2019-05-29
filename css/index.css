@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i|Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,latin-ext,vietnamese');
 
 body, html {
     height: calc(100% - 2em);
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Muli', sans-serif;
 }
 
 body {
@@ -17,7 +17,9 @@ body {
     background-attachment: fixed;
 }
 
-
+.headline {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+}
   
 
 aside {
